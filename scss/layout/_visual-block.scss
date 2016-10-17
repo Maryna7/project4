@@ -1,0 +1,129 @@
+.visual-block{
+	color: $white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	padding: 47px 0 82px;
+	position: relative;
+	text-align: center;
+	@include media('>=tablet') {
+		padding: 53px 0 127px;
+	}
+}
+.title-holder{
+	padding: 32px 0 0;
+	font-weight: normal;
+	@include media('>=tablet') {
+		padding: 100px 0 0;
+	}
+	h2{
+		position: relative;
+		padding: 0 0 16px;
+		font-weight: 400;
+		margin: 0 0 16px;
+		@include media('>=tablet') {
+			padding: 0 0 15px;
+			margin: 0 0 19px;
+		}	
+		&:after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			right: 25%;
+			left:25%;
+			height: 1px;
+			background: $white;
+			@include media('>=tablet') {
+				right: 43%;
+				left: 43%;
+			}	
+		}
+		br{
+		@include media('>=tablet') {
+			display: none;	
+		}	
+	}
+	}
+	.intro{
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 17px;
+		@include media('>=tablet') {
+			font-size: 28px;
+		}
+	}
+}
+.button-holder{
+	padding: 23px 0 0px;
+	@include media('>=tablet') {
+		padding: 55px 0 68px;
+	}
+	.btn-wrap{
+		font-weight: 700;
+		font-size: 20px;
+		@include media('>=tablet') {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 24px;
+		}
+	}
+	.txt-wrap{
+		font-size: 17px;
+		padding: 6px 0 12px;
+		@include media('>=tablet') {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 24px;
+			padding: 0 4px;
+		}
+	}
+}
+.info-holder{
+	display: none;
+	@include media('>=tablet') {
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-flow:row nowrap;
+		justify-content: center;
+		align-items: stretch;
+		align-content: stretch;
+		.info{
+			display: flex;
+			flex-flow:column wrap;
+			justify-content: space-between;
+			align-items: stretch;
+			align-content: stretch;
+			height: 248px;
+			max-width: 201px;
+			padding: 10px 7px 30px;
+			&:nth-child(odd){
+				background: rgba(70, 182, 227, .86);
+			}
+			&:nth-child(even){
+				background: rgba(112, 199, 234, .86);
+			}
+		}
+	}
+	.number{
+		font-size: 42px;
+		font-weight: 900;
+	}
+	.txt-line{
+		position: relative;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 0 0 15px;
+		&:after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			right: 20%;
+			left:20%;
+			height: 1px;
+			background: $white;
+		}
+	}
+}

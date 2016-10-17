@@ -1,0 +1,72 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {max-height: 1000000px;}
+
+body {
+	color: $base-text-color;
+	background: $base-background-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	min-width: $base-min-width;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#wrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin:0 auto;
+	text-align: left;
+}
+
+.container{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.btn{
+	@include animate(background color border-color);
+	display: inline-block;
+	vertical-align: top;
+	padding: 7px 7px 10px;
+	color: $white;
+	border: none;
+	outline: none;
+	@include media('>=tablet') {
+		padding: 11px 19px 15px;
+	}	
+}
+.blue{
+	background:$blue;
+	border: 2px solid $blue;
+	&:hover{
+		color:$blue;
+		background: $white;
+	}
+}
+.transp{
+	background:transparent;
+	border: 2px solid $white;
+	&:hover{
+		background:$white;
+		color:$blue;
+		border-color:$blue;
+	}
+}
+.white{
+	color:$dark-gray;
+	background: $white;
+	&:hover{
+		color:$white;
+		background: $dark-gray;
+	}
+}

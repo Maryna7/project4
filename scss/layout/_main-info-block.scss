@@ -1,0 +1,143 @@
+.main-info-block{
+	padding: 27px 0 36px;
+	text-align: center;
+	@include media('>=tablet') {
+		padding: 46px 0 34px;
+	}
+}
+.text-holder{
+	position: relative;
+	padding: 0 0 10px;
+	margin: 0 0 27px;
+	@include media('>=tablet') {
+		padding: 0 0 29px;
+		margin: 0 0 68px;
+	}	
+	&:after{
+		content:'';
+		position: absolute;
+		bottom: 0;
+		right: 37%;
+		left:37%;
+		height: 1px;
+		background: $gray;
+	}
+	h1{
+		margin: 0 0 10px;
+		@include media('>=tablet') {
+			margin: 0 0 17px;
+		}	
+	}
+	.intro-text{
+		font-size: 13px;
+		line-height: 	1;
+		@include media('>=tablet') {
+			font-size: 21px;
+			line-height: 1.8;
+		}
+	}
+	.hide-txt{
+		display: none;
+		@include media('>=tablet') {
+			display: inline;
+		}
+	}
+	br{
+		display: none;
+		@include media('>=widescreen') {
+			display: block;
+		}
+	}
+}
+.img-holder{
+	overflow: hidden;
+	margin: 0 -9px 3px;
+	padding: 0 4px;
+	@include media('>=tablet') {
+		margin: 0 -20px 15px;
+		padding: 0 80px;
+	}
+	.img-wrap{
+		float: left;
+		width: 50%;
+		padding: 0 9px;
+		@include media('>=tablet') {
+			width: 33.33%;
+			padding: 0 20px;
+			margin: 0 0 22px;
+		}
+		img{
+			width: 100%;
+			vertical-align: top;
+		}
+	}
+	.img-box{
+		position: relative;
+		@include media('>=tablet') {
+				margin: 0 0 11px;
+		}	
+		@include media('>=desktop') {
+			&:hover{
+				>.hover-text{
+					display: block;
+				}
+			}
+		}
+	}
+	.text-box{
+		font-size: 10px;
+		line-height: 1;	
+		@include media('>=phone') {
+			font-size: 14px;
+		}
+		@include media('>=tablet') {
+			font-size: 16px;
+			line-height: 1.23;
+		}
+	}
+}
+.hover-text{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: left;
+	padding: 19px;
+	color:$white;
+	background: rgba(70, 182, 227, .73);
+	font-size: 12px;
+	overflow-y:auto;
+	h4{
+		font-size: 20px;
+		margin: 0 0 5px;
+		line-height: 1;
+		font-weight: 700;
+	}
+	time{
+		font-style: italic;
+	}
+	p{
+		font-weight: 500;
+		line-height: 1.39;
+		padding: 22px 0 5px;
+	}
+	.transp{
+		font-weight: 700;
+		padding: 5px 8px;
+	}
+}
+.hide-btn{
+	border: 1px solid $blue;
+	color: $dark-gray;
+	padding: 5px 11px;
+	font-size: 12px;
+	&:hover{
+		color: $white;
+		background: $gray;
+	}
+	@include media('>=desktop') {
+		display: none;
+	}
+}

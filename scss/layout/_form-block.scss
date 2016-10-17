@@ -1,0 +1,60 @@
+.form-block{
+	background: #ebebeb;
+	padding: 35px 0 57px;
+	text-align: center;
+	@include media('>=tablet') {
+		padding: 196px 0 68px;
+	}
+	h3{
+		color: $blue;
+		font-size: 21px;
+		margin: 0 0 17px;
+		@include media('>=tablet') {
+			font-size: 24px;
+			margin: 0 0 44px;
+		}
+	}
+	.input-box{
+		margin: 0 0 9px;
+		font-size: 17px;
+		font-weight: 500;
+		color:#c3c3c3;
+		@include media('>=tablet') {
+			font-size: 21px;
+			margin: 0 0 31px;
+		}
+		input{
+			width: 100%;
+			max-width: 270px;
+			margin: 10px 0;
+			padding: 8px 12px;
+			border-radius: 10px;
+			outline: none;
+			@include media('>=tablet') {
+				margin: 0;
+				max-width: 360px;
+				padding: 13px 25px;
+			}
+			@include media('>=desktop') {
+				margin: 0 16px;
+			}
+		}
+	}
+	.large{
+		display: none;
+		font-size: 24px;
+		font-weight: 700;
+		@include media('>=tablet') {
+			display:inline-block;
+			padding: 8px 19px 13px;
+		}
+	}
+	.small{
+		font-size: 16px;
+		font-weight: 700;
+		padding: 5px 10px 9px;
+		@include media('>=tablet') {
+			display: none;
+		}
+	}
+}

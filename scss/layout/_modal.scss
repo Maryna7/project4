@@ -1,0 +1,62 @@
+.modal-active{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 11;	
+}
+.modal{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: calc(100vh - 20px);
+	max-width: calc(100% - 20px);
+	overflow: auto;
+	background: #fff;
+	color: #000;
+	z-index: 12;
+	min-width: 300px;
+	padding: 20px 20px 30px;
+	text-align: right;
+	@include media('>=phone') {
+		min-width: 450px;
+	}
+	@include media('>=tablet') {
+		min-width: 750px;
+	}
+	@include media('>=desktop') {
+		min-width: 1000px;
+	}
+	&.active{
+		display: block;
+	}
+	.modal-close{
+		cursor: pointer;
+		color: $gray;
+	}
+	form{
+		text-align: center;
+		padding: 15px 0 0;
+	}
+	.input-box{
+		input{
+			border: 1px solid $gray;
+			border-radius: 5px;
+			margin: 0 15px 15px;
+		}
+	}
+	.img-box{
+		float: left;
+		padding: 0 20px 0 0;
+	}
+	.text-box{
+		color:$dark-gray;
+		font-family: $base-font-sans-serif;
+		text-align: left;
+	}
+}

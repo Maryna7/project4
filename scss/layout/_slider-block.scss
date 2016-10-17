@@ -1,0 +1,115 @@
+.slider-block{
+	padding: 28px 0 33px;
+	text-align: center;
+	@include media('>=tablet') {
+		padding: 39px 0 78px;
+	}
+	.text-holder{
+		padding: 0 0 5px;
+		margin: 0 0 33px;
+		@include media('>=tablet') {
+			padding: 0 0 12px;
+			margin: 0 0 62px;
+		}	
+		&:after{
+			right:33%;
+			left: 33%;
+			@include media('>=tablet') {
+				right:41%;
+				left: 41%;
+			}	
+		}
+	}
+	.intro-text{
+		font-size: 13px;
+		line-height: 1.2;	
+		@include media('>=tablet') {
+			font-size: 25px;
+			line-height: 1.35;
+		}
+	}
+	h1{
+		margin: 0 0 10px;
+	}
+}
+.slider-holder{
+	padding: 0 30px;
+	@include media('>=tablet') {
+		padding: 0 65px;
+	}	
+	.slide{
+		text-align: center;
+	}
+	.slick-prev,
+	.slick-next{
+		z-index: 5;
+		top:31%;
+		left:13px;
+		@include media('>=tablet') {
+			left:0px;
+		}	
+		&:before{
+			font-family: 'icomoon';
+			content: "\e902";
+			color: $gray;
+			font-size: 25px;
+			@include media('>=tablet') {
+				font-size: 40px;	
+			}
+		}
+	}
+	.slick-next{
+		right: 13px;
+		left:auto;
+		&:before{
+			content: "\e901";
+		}
+		@include media('>=tablet') {
+			right:6px;	
+		}
+	}
+	.slick-slide{
+		&:focus{
+			outline: none;
+		}
+	}
+	.img-box{
+		margin: 0 0 10px;
+		padding: 0 39px;	
+		@include media('>=tablet') {
+			margin: 0 0 25px;
+			padding: 0;	
+		}	
+	}
+	img{
+		margin: 0 auto;
+		vertical-align: top;
+		width: 100%;
+		@include media('>=tablet') {
+			width:auto;
+		}
+	}
+	h3{
+		margin: 0 0 8px;
+		color: $dark-gray;
+		@include media('>=tablet') {
+			color: $gray;
+			font-size: 20px;
+		}
+		@include media('>=desktop') {
+			font-size: 24px;
+		}
+	}
+	.italic{
+		font-style: italic;
+		display: block;
+		font-size: 12px;
+		line-height: 1.5;
+		@include media('>=tablet') {
+			font-size: 16px;
+		}
+		@include media('>=desktop') {
+			font-size: 20px;
+		}
+	}
+}
